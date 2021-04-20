@@ -1,2 +1,1 @@
-# Podcaster
-project of the nlw5
+https://www.figma.com/file/IhYMqaVMC4Hg2FT3MZth52/Podcastr-(Copy)?node-id=160%3A2761
