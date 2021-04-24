@@ -26,6 +26,7 @@ type EpisodeProps = {
 }
 
 export default function Episode({ episode }) {
+
 	return (
 		<div className={styles.episode}>
 				<div className={styles.thumbnailContainer}>
@@ -61,14 +62,30 @@ export default function Episode({ episode }) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
+	const { data } = await api.get('episodes', {
+    params: {
+      _limit: 2,
+      _sort: 'published_at',
+      _order: 'desc'
+    }
+  })
+
+  const paths = data .map(episode => {
+  	return {
+  		params: {
+  			slug: episode.id
+  		}
+  	}
+  }) 
+
 	return {
-		paths: [],
-		fakkback: 'blocking',
+		paths,
+		fallback: 'blocking'
 	}
 }
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-	const { slug } = ctx.parans
+	const { slug } = ctx.params
 
 	const { data } = await api.get(`/episodes/${slug}`)
 
