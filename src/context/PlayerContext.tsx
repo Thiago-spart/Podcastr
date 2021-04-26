@@ -33,7 +33,7 @@ type PlayerContextProvider = {
 	children: ReactNode
 }
 
-export function PlayerContextProvider({ children}: PlayerContextProvider) {
+export function PlayerContextProvider({ children }: PlayerContextProviderProps) {
 	const [episodeList, setEpisodeList] = useState([])
   const [currentEpisodeIndex, setCurrentEpisodeIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
@@ -65,7 +65,7 @@ export function PlayerContextProvider({ children}: PlayerContextProvider) {
   }
 
   function setPlayingState(state) {
-    setPlayingState(state)
+    setIsPlaying(state)
   }
 
   function clearPlayerState() {
@@ -77,10 +77,10 @@ export function PlayerContextProvider({ children}: PlayerContextProvider) {
   const hasNext = isShuffling || (currentEpisodeIndex + 1) < episodeList.length 
 
   function playNext() {  	
-    if (isShuffling) {
+    if(isShuffling) {
       const nextRandomEpisodeIndex = Math.floor(Math.random() * episodeList.length)
       setCurrentEpisodeIndex(nextRandomEpisodeIndex)
-    } else if (hasNext) {
+    } else if(hasNext) {
   		setCurrentEpisodeIndex(currentEpisodeIndex + 1)      
     }
   }
@@ -96,11 +96,11 @@ export function PlayerContextProvider({ children}: PlayerContextProvider) {
   			episodeList, 
   			currentEpisodeIndex, 
   			play, 
+  			playList,
   			isPlaying,
         isLooping,
         isShuffling, 
-  			setPlayingState ,
-  			playList,
+  			setPlayingState,
   			playNext,
   			playPrevious,
   			hasNext,
