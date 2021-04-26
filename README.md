@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="#-tecnologias">Techs</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
@@ -16,7 +16,7 @@
 <br>
 
 <p align="center">
-  <img alt="Podcaster" src=".public/podcastr-exemple.png" width="100%">
+  <img alt="Podcaster" src="./public/podcastr-exemple.png" width="100%">
 </p>
 
 ## 🚀 Techs
@@ -57,7 +57,7 @@ Podcaster is an aplication made on the nlw5(Next Level Week), focusing on Next.j
 **Clone the project and access the folder**
 
 ```bash
-$ git clone https://github.com/felipeblobo/devtalk.git && cd devtalk
+$ git clone https://github.com/Thiago-spart/Podcaster.git && cd Podcastr
 ```
 
 **Follow the steps below**
@@ -75,7 +75,7 @@ $ yarn dev
 
 ## 🔖 Layout
 
-you can see the project's layout on [this link](https://www.figma.com/file/IhYMqaVMC4Hg2FT3MZth52/Podcastr-(Copy)?node-id=160%3A2761). It's necessary have an account on [Figma](https://figma.com) para acessá-lo.
+You can see the project's layout on [this link](https://www.figma.com/file/IhYMqaVMC4Hg2FT3MZth52/Podcastr-(Copy)?node-id=160%3A2761). It's necessary have an account on [Figma](https://figma.com) to see it.
 
 ## :memo: License
 
